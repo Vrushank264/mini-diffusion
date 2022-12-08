@@ -1,0 +1,7 @@
+tqdm==4.59.0
+numpy==1.21.3
+matplotlib==3.5.1
+torch==1.9.0
+torchvision
+opencv-python
+wandb
