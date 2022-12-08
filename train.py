@@ -105,7 +105,6 @@ def train(unet, ddpm_model, loader, opt, criterion, scaler, num_cls, save_dir, w
 
       def animate_plot(i, xis):
 
-        print(f'GIF animation frame {i} of {xis.shape[0]}', end = '\r')
         plots = []
 
         for row in range(n_sample // num_cls):
@@ -122,7 +121,7 @@ def train(unet, ddpm_model, loader, opt, criterion, scaler, num_cls, save_dir, w
 
       ani = FuncAnimation(fig, animate_plot, fargs = [xis], interval = 200, blit = False, repeat = True, frames = xis.shape[0])
       ani.save(f'{save_dir}/epoch_{epoch}.gif', dpi = 100, writer = PillowWriter(fps = 5))
-      print('Done')
+      print('GIF Saved!')
 
       torch.save(ddpm_model.state_dict(), os.path.join(save_dir, f'ddpm.pth'))
       torch.save(unet.state_dict(), os.path.join(save_dir, f'unet.pth'))
