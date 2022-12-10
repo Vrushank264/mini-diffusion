@@ -1,5 +1,5 @@
 # mini-diffusion
-A Small lightweight diffusion model in PyTorch trained on MNIST.
+A Small lightweight diffusion model in PyTorch.
 
 <h3> <b> Result: </b> </h3>
 
